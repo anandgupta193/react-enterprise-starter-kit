@@ -1,0 +1,35 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true,
+      "jest": true
+    },
+    "globals": {
+    },
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "ecmaFeatures": {
+        "impliedStrict": true,
+        "jsx": true
+      },
+      "sourceType": "module"
+    },
+    "plugins": ["react", "react-hooks"],
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended",
+       "airbnb"
+    ],
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "rules": {
+        "no-console": "error",
+        "max-len": ["error", 120, { "code": 80 }]    }
+  }	
+

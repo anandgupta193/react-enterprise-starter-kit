@@ -1,0 +1,42 @@
+{
+  "name": "reactscratch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev-server": "nodemon --exec babel-node src/server/server.js --ignore dist/",
+    "dev-bundle": "webpack -w -d",
+    "eslint": "eslint --config ./.eslintrc --ext .js,jsx ./src --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/node": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.1.0",
+    "eslint": "^7.3.1",
+    "eslint-plugin-react": "^7.20.1",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "jest": "^26.1.0",
+    "nodemon": "^2.0.4",
+    "eslint-config-airbnb": "^18.2.0",
+    "react-test-renderer": "^16.13.1"
+  }
+}
