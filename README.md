@@ -1,6 +1,6 @@
 # react-starter-kit
 
-#run the following commands tu run project in local machine
+#run the following commands to run project in local machine
 
 ```bash
 npm run dev-server
