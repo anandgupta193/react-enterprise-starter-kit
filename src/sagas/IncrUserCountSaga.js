@@ -1,16 +1,15 @@
 import { takeLatest, put, call } from 'redux-saga/effects';
+import { INCREMENT, INCREMENT_SUCCESS } from '../actionTypes/CounterActionTypes';
 import RestClient from '../Utils/RestClient';
-// Without this import Saga was not working.?? @anandgupta193
-import '@babel/polyfill';
 
-function* getUserSaga(action) {
+function* incrementUserCountSaga(action) {
   const requestObject = {
     url: `base-url/${action.payload.queryParam}`,
   };
   const response = yield call(RestClient.get, requestObject);
-  yield put({ type: 'SOME_ACTION_TYPE_SUCCESS', payload: response });
+  yield put({ type: INCREMENT_SUCCESS, payload: response });
 }
 
 export default function* watchUserSaga() {
-  yield takeLatest('SOME_ACTION_TYPE', getUserSaga);
+  yield takeLatest(INCREMENT, incrementUserCountSaga);
 }

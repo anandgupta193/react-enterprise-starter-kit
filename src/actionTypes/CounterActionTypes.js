@@ -1,2 +1,4 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
+export const INCREMENT_SUCCESS = 'INCREMENT';
+export const DECREMENT_SUCCESS = 'DECREMENT';
