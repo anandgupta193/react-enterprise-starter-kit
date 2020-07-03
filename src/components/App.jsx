@@ -9,7 +9,7 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(allActions.userActions.setUser({ name: 'shubham' }));
+    dispatch(allActions.setUser({ name: 'shubham' }));
   }, [dispatch]);
 
   return (
@@ -20,14 +20,14 @@ const App = () => {
             Hello,
             {currentUser.user.name}
           </h1>
-          <button type="button" onClick={() => dispatch(allActions.userActions.logOut())}>
+          <button type="button" onClick={() => dispatch(allActions.logOut())}>
             Logout
           </button>
         </>
       ) : (
         <>
           <h1>Login</h1>
-          <button type="button" onClick={() => dispatch(allActions.userActions.setUser({ name: 'shubham' }))}>
+          <button type="button" onClick={() => dispatch(allActions.setUser({ name: 'shubham' }))}>
             Login
           </button>
         </>
@@ -36,10 +36,10 @@ const App = () => {
         Counter:
         {counter}
       </h1>
-      <button type="button" onClick={() => dispatch(allActions.counterActions.increment())}>
+      <button type="button" onClick={() => dispatch(allActions.addition())}>
         Increase Counter
       </button>
-      <button type="button" onClick={() => dispatch(allActions.counterActions.decrement())}>
+      <button type="button" onClick={() => dispatch(allActions.substraction())}>
         Decrease Counter
       </button>
     </div>

@@ -1,8 +1,9 @@
-import counterActions from './CounterAction';
+import { addition, substraction } from './CounterAction';
 import { setUser, logOut } from './UserAction';
 
 const allActions = {
-  counterActions,
+  addition,
+  substraction,
   setUser,
   logOut,
 };

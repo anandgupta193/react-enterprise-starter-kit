@@ -11,7 +11,7 @@ server.get('/', (req, res) => {
       </head>
       <body>
         <div id="mountNode">Hello there</div>
-        <script src="/main.js"></script>
+        <script src="/app.js"></script>
       </body>
     </html>
   `);
