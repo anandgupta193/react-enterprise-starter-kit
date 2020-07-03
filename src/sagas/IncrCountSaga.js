@@ -1,6 +1,6 @@
 import { takeLatest, put, call } from 'redux-saga/effects';
 import { INCREMENT, INCREMENT_SUCCESS } from '../actionTypes/CounterActionTypes';
-import RestClient from '../Utils/RestClient';
+import RestClient from '../utils/RestClient';
 
 function* incrementUserCountSaga(action) {
   const requestObject = {
@@ -10,6 +10,6 @@ function* incrementUserCountSaga(action) {
   yield put({ type: INCREMENT_SUCCESS, payload: response });
 }
 
-export default function* watchUserSaga() {
+export default function* watchIncrementCountSaga() {
   yield takeLatest(INCREMENT, incrementUserCountSaga);
 }
