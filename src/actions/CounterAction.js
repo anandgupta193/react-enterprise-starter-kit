@@ -1,15 +1,10 @@
 import { INCREMENT, DECREMENT } from '../actionTypes/CounterActionTypes';
 
 // TODO: Please rename these methods @shubhamsWEB
-const increment = () => ({
+export const addition = () => ({
   type: INCREMENT,
 });
 
-const decrement = () => ({
+export const substraction = () => ({
   type: DECREMENT,
 });
-
-export default {
-  increment,
-  decrement,
-};
