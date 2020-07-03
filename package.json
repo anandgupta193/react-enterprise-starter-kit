@@ -5,8 +5,8 @@
   "main": "index.jsx",
   "scripts": {
     "test": "jest",
-    "dev-server": "nodemon --exec babel-node src/server/server.js --ignore dist/",
-    "dev-bundle": "webpack -w -d --progress --config ./webpack.config.js",
+    "start-dev": "nodemon --exec babel-node src/server/server.js --ignore dist/",
+    "bundle-dev": "webpack -w -d --progress --config ./webpack.config.js",
     "eslint": "eslint --config ./.eslintrc --ext .js,jsx ./src --fix"
   },
   "keywords": [],
@@ -15,7 +15,6 @@
   "dependencies": {
     "@babel/core": "^7.10.3",
     "@babel/node": "^7.10.3",
-    "@babel/polyfill": "^7.10.4",
     "@babel/preset-env": "^7.10.3",
     "@babel/preset-react": "^7.10.1",
     "babel-loader": "^8.1.0",
