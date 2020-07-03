@@ -1,10 +1,9 @@
 import { INCREMENT, DECREMENT } from '../actionTypes/CounterActionTypes';
 
-// TODO: Please rename these methods @shubhamsWEB
-export const addition = () => ({
+export const addCount = () => ({
   type: INCREMENT,
 });
 
-export const substraction = () => ({
+export const substractCount = () => ({
   type: DECREMENT,
 });

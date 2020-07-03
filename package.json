@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "start-dev": "nodemon --exec babel-node src/server/server.js --ignore dist/",
-    "bundle-dev": "webpack -w -d --progress --config ./webpack.config.js",
+    "build-dev": "webpack -d --progress --config ./webpack.config.js",
     "eslint": "eslint --config ./.eslintrc --ext .js,jsx ./src --fix"
   },
   "keywords": [],

@@ -1,9 +1,11 @@
 import { fork } from 'redux-saga/effects';
-import UserSaga from './IncrUserCountSaga';
+import IncrCounterSaga from './IncrCountSaga';
+import DecrCounterSaga from './DecrCountSaga';
 
 // List of all the sagas
 export default function* rootSagas() {
   yield* [
-    fork(UserSaga),
+    fork(IncrCounterSaga),
+    fork(DecrCounterSaga),
   ];
 }
