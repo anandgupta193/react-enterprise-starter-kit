@@ -1,5 +1,7 @@
 import { takeLatest, put, call } from 'redux-saga/effects';
 import RestClient from '../Utils/RestClient';
+// Without this import Saga was not working.?? @anandgupta193
+import '@babel/polyfill';
 
 function* getUserSaga(action) {
   const requestObject = {
