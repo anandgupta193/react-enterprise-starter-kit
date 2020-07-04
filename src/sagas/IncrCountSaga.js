@@ -1,6 +1,6 @@
 import { takeLatest, put, call } from 'redux-saga/effects';
 import { INCREMENT, INCREMENT_SUCCESS } from '../actionTypes/CounterActionTypes';
-import RestClient from '../utils/RestClient';
+import RestClient from '../Utils/RestClient';
 
 function* incrementUserCountSaga(action) {
   const requestObject = {
