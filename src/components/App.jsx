@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { addCount, substractCount } from '../actions/CounterAction';
 import { INCREASE_COUNTER, DECREASE_COUNTER } from '../constants/AppConstants';
 
@@ -12,6 +13,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <button type="button"><Link to="/Home">Home</Link></button>
       <h1>
         { `Counter ${counter}` }
       </h1>
