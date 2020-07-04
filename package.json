@@ -5,12 +5,27 @@
   "main": "index.jsx",
   "scripts": {
     "test": "jest",
-    "start-dev": "nodemon --exec babel-node src/server/server.js --ignore dist/",
-    "build-dev": "webpack -d --progress --config ./webpack.config.js",
+    "start-dev": "npm run eslint && better-npm-run build-dev && better-npm-run start-dev",
+    "build-dev": "better-npm-run build-dev",
     "eslint": "eslint --config ./.eslintrc --ext .js,jsx ./src --fix"
   },
-  "keywords": [],
-  "author": "",
+  "betterScripts": {
+    "build-dev": {
+      "command": "webpack -d --progress --config ./webpack.config.js",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "start-dev": {
+      "command": "nodemon --exec babel-node src/server/server.js --ignore dist/",
+      "env": {
+        "NODE_ENV": "development",
+        "PORT": 3000
+      }
+    }
+  },
+  "keywords": ["react", "javascript", "webpack", "babel", "jsx", "html", "css", "tailwind", "server side rendering", "eslint", "storybook", "redux", "saga"],
+  "author": "Anand (@aanandgupta193) & Shubham (@shubhamsWEB)",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.10.3",
@@ -25,20 +40,16 @@
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
-    "redux-devtools-extension": "^2.13.8",
     "redux-saga": "^1.1.3",
     "redux-thunk": "^2.3.0",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run eslint"
-    }
+    "webpack-cli": "^3.3.12",
+    "redux-devtools-extension": "^2.13.8"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.1.0",
+    "better-npm-run": "^0.1.1",
     "eslint": "^7.3.1",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0",
@@ -48,5 +59,10 @@
     "jest": "^26.1.0",
     "nodemon": "^2.0.4",
     "react-test-renderer": "^16.13.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run eslint"
+    }
   }
 }
