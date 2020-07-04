@@ -7,7 +7,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 // import App from './components/App';
 import reducers from './reducers';
 import rootSagas from './sagas';
-import Routes from './routers/allRoutes';
+import Routes from './router/Routers';
 
 const sagaMiddleware = createSagaMiddleware();
 
