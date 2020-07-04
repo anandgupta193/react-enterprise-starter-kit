@@ -3,7 +3,7 @@ import express from 'express';
 const server = express();
 server.use(express.static('dist'));
 
-server.get('/', (req, res) => {
+server.get('/*', (req, res) => {
   res.send(`
     <html>
       <head>
