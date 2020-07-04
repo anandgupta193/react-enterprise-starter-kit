@@ -1,46 +1,25 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import allActions from '../actions';
+import { addCount, substractCount } from '../actions/CounterAction';
+import { INCREASE_COUNTER, DECREASE_COUNTER } from '../constants/AppConstants';
 
 const App = () => {
   const counter = useSelector((state) => state.counter);
-  const currentUser = useSelector((state) => state.currentUser);
-
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(allActions.setUser({ name: 'shubham' }));
-  }, [dispatch]);
+  const incrementCounter = () => dispatch(addCount());
+  const decrementCounter = () => dispatch(substractCount());
 
   return (
     <div className="App">
-      {currentUser.loggedIn ? (
-        <>
-          <h1>
-            Hello,
-            {currentUser.user.name}
-          </h1>
-          <button type="button" onClick={() => dispatch(allActions.logOut())}>
-            Logout
-          </button>
-        </>
-      ) : (
-        <>
-          <h1>Login</h1>
-          <button type="button" onClick={() => dispatch(allActions.setUser({ name: 'shubham' }))}>
-            Login
-          </button>
-        </>
-      )}
       <h1>
-        Counter:
-        {counter}
+        { `Counter ${counter}` }
       </h1>
-      <button type="button" onClick={() => dispatch(allActions.addition())}>
-        Increase Counter
+      <button type="button" onClick={incrementCounter}>
+        { INCREASE_COUNTER }
       </button>
-      <button type="button" onClick={() => dispatch(allActions.substraction())}>
-        Decrease Counter
+      <button type="button" onClick={decrementCounter}>
+        { DECREASE_COUNTER }
       </button>
     </div>
   );
