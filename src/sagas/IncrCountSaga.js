@@ -3,10 +3,12 @@ import { INCREMENT, INCREMENT_SUCCESS } from '../actionTypes/CounterActionTypes'
 // import RestClient from '../Utils/RestClient';
 
 function* incrementUserCountSaga() {
-  // const requestObject = {
-  //   url: `base-url/${action.payload.queryParam}`,
-  // };
-  // const response = yield call(RestClient.get, requestObject);
+  try {
+    // const response = yield call(RestClient.get, requestObject);
+    // console.log(response.data);
+  } catch (error) {
+    // console.log(error.message);
+  }
   yield put({ type: INCREMENT_SUCCESS, payload: {} });
 }
 
