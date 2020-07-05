@@ -4,10 +4,9 @@ import createSagaMiddleware from 'redux-saga';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-// import App from './components/App';
 import reducers from './reducers';
 import rootSagas from './sagas';
-import Routes from './router/Routers';
+import Routes from './routes/Routes';
 
 const sagaMiddleware = createSagaMiddleware();
 
