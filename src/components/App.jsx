@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { Button } from '@storybook/react/demo';
 import { addCount, substractCount } from '../actions/CounterAction';
 import { INCREASE_COUNTER, DECREASE_COUNTER } from '../constants/AppConstants';
 
@@ -13,16 +14,16 @@ const App = () => {
 
   return (
     <div className="App">
-      <button type="button"><Link to="/Home">Home</Link></button>
+      <Button type="button"><Link to="/Home">Home</Link></Button>
       <h1>
         { `Counter ${counter}` }
       </h1>
-      <button type="button" onClick={incrementCounter}>
+      <Button type="button" onClick={incrementCounter}>
         { INCREASE_COUNTER }
-      </button>
-      <button type="button" onClick={decrementCounter}>
+      </Button>
+      <Button type="button" onClick={decrementCounter}>
         { DECREASE_COUNTER }
-      </button>
+      </Button>
     </div>
   );
 };

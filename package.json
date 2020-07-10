@@ -8,7 +8,8 @@
     "start-dev": "npm run eslint && better-npm-run build-dev && better-npm-run start-dev",
     "build-dev": "better-npm-run build-dev",
     "eslint": "eslint --config ./.eslintrc --ext .js,jsx ./src --fix",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook",
+    "lint-staged": "lint-staged"
   },
   "betterScripts": {
     "build-dev": {
@@ -79,7 +80,10 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run eslint"
+      "pre-commit": "npm run lint-staged"
     }
+  },
+  "lint-staged": {
+    "lint-staged": "eslint --fix"
   }
 }
