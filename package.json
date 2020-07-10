@@ -14,7 +14,7 @@
   },
   "betterScripts": {
     "build-dev": {
-      "command": "webpack -w -d --progress --config ./webpack.config.js",
+      "command": "webpack -d --progress --config ./webpack.config.js",
       "env": {
         "NODE_ENV": "development",
         "PORT": 3000
@@ -100,7 +100,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run eslint"
+      "pre-commit": "npm run eslint && npm run build-dev"
     }
   }
 }
