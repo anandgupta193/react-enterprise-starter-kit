@@ -5,24 +5,38 @@
   "main": "index.jsx",
   "scripts": {
     "test": "jest",
-    "start-dev": "npm run eslint && better-npm-run build-dev && better-npm-run start-dev",
+    "start-dev": "better-npm-run start-dev",
     "build-dev": "better-npm-run build-dev",
+    "build-prod": "better-npm-run build-prod",
+    "build-analyze": "better-npm-run build-dev-analyze",
     "eslint": "eslint --config ./.eslintrc --ext .js,jsx ./src --fix",
     "storybook": "start-storybook"
   },
   "betterScripts": {
     "build-dev": {
-      "command": "webpack -d --progress --config ./webpack.config.js",
-      "env": {
-        "NODE_ENV": "development"
-      }
-    },
-    "start-dev": {
-      "command": "nodemon --exec babel-node src/server/server.js --ignore dist/",
+      "command": "webpack -w -d --progress --config ./webpack.config.js",
       "env": {
         "NODE_ENV": "development",
         "PORT": 3000
       }
+    },
+    "build-dev-analyze": {
+      "command": "webpack -w -d --progress --config ./webpack.config.js",
+      "env": {
+        "NODE_ENV": "development",
+        "PORT": 3000,
+        "analyze": true
+      }
+    },
+    "build-prod": {
+      "command": "webpack -w -d --progress --config ./webpack.config.js",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": 3000
+      }
+    },
+    "start-dev": {
+      "command": "webpack-dev-server"
     }
   },
   "keywords": [
@@ -68,15 +82,21 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.1.0",
     "better-npm-run": "^0.1.1",
+    "compression-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^6.0.3",
     "eslint": "^7.3.1",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.1",
     "eslint-plugin-react-hooks": "^4.0.4",
+    "file-loader": "^6.0.0",
     "jest": "^26.1.0",
     "nodemon": "^2.0.4",
-    "react-test-renderer": "^16.13.1"
+    "react-test-renderer": "^16.13.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-dev-server": "^3.11.0"
   },
   "husky": {
     "hooks": {
