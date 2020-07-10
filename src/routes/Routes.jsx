@@ -4,7 +4,7 @@ import App from '../components/App';
 import Home from '../components/home/Home';
 import notfound from '../components/404/NotFound';
 
-const Routers = () => (
+const Routes = () => (
   <>
     <BrowserRouter>
       <Switch>
@@ -15,4 +15,4 @@ const Routers = () => (
     </BrowserRouter>
   </>
 );
-export default Routers;
+export default Routes;
