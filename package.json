@@ -84,6 +84,6 @@
     }
   },
   "lint-staged": {
-    "lint-staged": "eslint --fix"
+    "lint-staged": "eslint --config ./.eslintrc --ext .js,jsx ./src --fix"
   }
 }
