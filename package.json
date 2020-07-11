@@ -1,7 +1,7 @@
 {
   "name": "reactscratch",
   "version": "1.0.0",
-  "description": "",
+  "description": "Awesome React Starter Kit that can scale for an enterprise application with the very easy maintainable codebase.",
   "main": "index.jsx",
   "scripts": {
     "test": "jest",
@@ -30,7 +30,7 @@
       }
     },
     "build-prod": {
-      "command": "webpack -w -d --progress --config ./webpack.config.js",
+      "command": "webpack -d --progress --config ./webpack.config.js",
       "env": {
         "NODE_ENV": "production",
         "PORT": 3000
