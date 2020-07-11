@@ -63,4 +63,5 @@ module.exports = {
     port: 3000,
   },
   plugins: commonPlugins,
+  mode: process.env.NODE_ENV || 'production',
 };
