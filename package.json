@@ -30,7 +30,7 @@
       }
     },
     "build-prod": {
-      "command": "webpack -w -d --progress --config ./webpack.config.js",
+      "command": "webpack -d --progress --config ./webpack.config.js",
       "env": {
         "NODE_ENV": "production",
         "PORT": 3000
