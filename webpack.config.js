@@ -1,9 +1,7 @@
-/* eslint-disable no-console */
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const CompressionPlugin = require('compression-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const commonPlugins = [
   new CopyPlugin({
@@ -27,16 +25,6 @@ if (process.env.NODE_ENV === 'production') {
     algorithm: 'gzip',
     filename: '[path].gz[query]',
     test: /\.(js|jsx)$|\.css$|\.html$/,
-  }));
-
-  commonPlugins.push(new UglifyJsPlugin({
-    test: /\.(js|jsx)$/,
-    sourceMap: true,
-    uglifyOptions: {
-      output: {
-        comments: false,
-      },
-    },
   }));
 }
 
@@ -63,5 +51,17 @@ module.exports = {
     port: 3000,
   },
   plugins: commonPlugins,
-  mode: process.env.NODE_ENV || 'production',
+  mode: process.env.NODE_ENV,
+  optimization: {
+    splitChunks: {
+      name: 'vendor',
+      chunks: 'all',
+      minChunks: 1,
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+        },
+      },
+    },
+  },
 };
