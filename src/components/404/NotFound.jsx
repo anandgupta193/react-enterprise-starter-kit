@@ -1,4 +1,5 @@
 import React from 'react';
+import './NotFound.scss';
 
 import { ERROR_CODE, ERROR_TEXT } from '../../constants/404Constants';
 
