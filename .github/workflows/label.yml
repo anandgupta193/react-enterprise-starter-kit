@@ -5,15 +5,14 @@
 # file with configuration.  For more information, see:
 # https://github.com/actions/labeler
 
-name: Labeler
-on: [pull_request]
+name: "Pull Request Labeler"
+on:
+- pull_request
 
 jobs:
-
-  runs-on: macos-latest
-
-  steps:
-  - uses: actions/labeler@v2
-
-    with:
-      repo-token: "${{ secrets.GITHUB_TOKEN }}"
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/labeler@v2
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
