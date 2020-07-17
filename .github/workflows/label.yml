@@ -9,7 +9,18 @@ name: Labeler
 on: [pull_request]
 
 jobs:
-  label:
+
+  # Add 'repo' label to any root file changes
+  repo:
+    - ./*
+
+  # Add 'test' label to any change to *.spec.js files within the source dir
+  test:
+    - src/**/*.test.jsx
+
+  # Add 'source' label to any change to src files within the source dir EXCEPT for the docs sub-folder
+  source:
+    - any: ['src/**/*', '!src/docs/*']
 
     runs-on: macos-latest
 
