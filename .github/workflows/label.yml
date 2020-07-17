@@ -10,10 +10,10 @@ on: [pull_request]
 
 jobs:
 
-    runs-on: macos-latest
+  runs-on: macos-latest
 
-    steps:
-    - uses: actions/labeler@v2
+  steps:
+  - uses: actions/labeler@v2
 
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+    with:
+      repo-token: "${{ secrets.GITHUB_TOKEN }}"
