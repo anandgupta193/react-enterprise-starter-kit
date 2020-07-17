@@ -1,6 +1,6 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-# react-starter-kit
+# react-enterprise-starter-kit
 
 Run the following commands to run project in local machine
 
