@@ -4,7 +4,7 @@
 [![GitHub license](https://img.shields.io/github/license/anandgupta193/react-enterprise-starter-kit)](https://github.com/anandgupta193/react-enterprise-starter-kit/blob/master/LICENSE)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-# react-enterprise-starter-kit:fire:
+# react-enterprise-starter-kit :fire:
 
 Run the following commands to run project in local machine
 
