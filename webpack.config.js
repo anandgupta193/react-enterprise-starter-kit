@@ -8,9 +8,11 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const env = process.env.NODE_ENV;
 
 const commonPlugins = [
+
   new CopyPlugin({
     patterns: [{ from: './public/index.html' }],
   }),
+
   new ExtractCssChunks({
     filename: '[name].css',
     chunkFilename: '[id].css',
