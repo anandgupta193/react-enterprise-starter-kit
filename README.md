@@ -2,18 +2,14 @@
 
 # react-starter-kit
 
-# run the following commands to run project in local machine
+Run the following commands to run project in local machine
 
 ```bash
-npm run dev-server
+npm run build-dev
 ```
 
-```bash
-npm run dev-bundle
-```
-
-# to test eslint run
+To Create production build run
 
 ```bash
-npm run eslint
+npm run build-prod
 ```
