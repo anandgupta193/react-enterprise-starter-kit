@@ -1,4 +1,7 @@
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) ![Node.js CI](https://github.com/anandgupta193/react-enterprise-starter-kit/workflows/Node.js%20CI/badge.svg?branch=master) https://img.shields.io/github/last-commit/google/skia.svg
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+![Node.js CI](https://github.com/anandgupta193/react-enterprise-starter-kit/workflows/Node.js%20CI/badge.svg?branch=master) 
+https://img.shields.io/github/last-commit/google/skia.svg
+https://img.shields.io/github/issues/detail/u/badges/shields/979.svg
 
 # react-enterprise-starter-kit
 
