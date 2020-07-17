@@ -21,7 +21,7 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-      "airbnb"
+    "airbnb"
   ],
   "settings": {
     "react": {
@@ -30,7 +30,9 @@
   },
   "rules": {
       "no-console": "error",
-      "max-len": ["error", 120, { "code": 80 }]
+      "max-len": ["error", 120, { "code": 80 }],
+      "import/no-extraneous-dependencies": "off",
+      "quotes": ["error", "single", { "allowTemplateLiterals": true }]
   },
   "ignorePatterns": ["dist"]
 }	

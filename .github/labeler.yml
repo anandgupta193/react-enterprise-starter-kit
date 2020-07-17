@@ -13,3 +13,7 @@ source:
 # Add 'github-workflows' label to any change to workflows files within the .github dir
 github-workflows:
   - any: ['.github/**/*']
+
+# Add 'webpack' label to any change to workflows files within the webpack dir
+webpack:
+  - any: ['webpack/**/*']

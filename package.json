@@ -14,14 +14,14 @@
   },
   "betterScripts": {
     "build-dev": {
-      "command": "rm -rf dist && webpack --progress --config ./webpack.config.js",
+      "command": "rm -rf dist && webpack --progress --config ./webpack/client/webpack.dev.config.js",
       "env": {
         "NODE_ENV": "development",
         "PORT": 3000
       }
     },
     "build-dev-analyze": {
-      "command": "webpack -w --progress --config ./webpack.config.js",
+      "command": "webpack -w --progress --config ./webpack/client/webpack.dev.config.js",
       "env": {
         "NODE_ENV": "development",
         "PORT": 3000,
@@ -29,7 +29,7 @@
       }
     },
     "build-prod": {
-      "command": "rm -rf dist && webpack --progress --config ./webpack.config.js",
+      "command": "rm -rf dist && webpack --progress --config ./webpack/client/webpack.prod.config.js",
       "env": {
         "NODE_ENV": "production",
         "PORT": 3000
@@ -100,7 +100,8 @@
     "sass-loader": "^9.0.2",
     "webpack": "^4.43.0",
     "webpack-bundle-analyzer": "^3.8.0",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.0.9"
   },
   "husky": {
     "hooks": {
