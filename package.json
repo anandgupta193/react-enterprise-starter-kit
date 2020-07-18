@@ -36,7 +36,7 @@
       }
     },
     "start-dev": {
-      "command": "webpack-dev-server --config ./webpack/client/webpack.dev.config.js --open"
+      "command": "webpack-dev-server --config ./webpack/client/webpack.dev.config.js"
     }
   },
   "keywords": [
@@ -81,7 +81,6 @@
     "better-npm-run": "^0.1.1",
     "clean-webpack-plugin": "^3.0.0",
     "compression-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^6.0.3",
     "eslint": "^7.3.1",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0",
@@ -90,6 +89,7 @@
     "eslint-plugin-react-hooks": "^4.0.4",
     "extract-css-chunks-webpack-plugin": "^4.7.5",
     "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
     "husky": "^4.2.5",
     "jest": "^26.1.0",
     "lint-staged": "^10.2.11",
@@ -102,6 +102,7 @@
     "webpack": "^4.43.0",
     "webpack-bundle-analyzer": "^3.8.0",
     "webpack-dev-server": "^3.11.0",
+    "webpack-manifest-plugin": "^2.2.0",
     "webpack-merge": "^5.0.9"
   },
   "husky": {
