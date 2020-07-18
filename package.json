@@ -14,7 +14,11 @@
   },
   "betterScripts": {
     "build-dev": {
+<<<<<<< HEAD
       "command": "rm -rf dist && webpack --progress --config ./webpack/client/webpack.dev.config.js",
+=======
+      "command": "webpack --progress --config ./webpack.config.js",
+>>>>>>> Added file-loader and designed home page
       "env": {
         "NODE_ENV": "development",
         "PORT": 3000
@@ -29,14 +33,18 @@
       }
     },
     "build-prod": {
+<<<<<<< HEAD
       "command": "rm -rf dist && webpack --progress --config ./webpack/client/webpack.prod.config.js",
+=======
+      "command": "webpack --progress --config ./webpack.config.js",
+>>>>>>> Added file-loader and designed home page
       "env": {
         "NODE_ENV": "production",
         "PORT": 3000
       }
     },
     "start-dev": {
-      "command": "webpack-dev-server"
+      "command": "webpack-dev-server --open"
     }
   },
   "keywords": [
@@ -79,6 +87,7 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.1.0",
     "better-npm-run": "^0.1.1",
+    "clean-webpack-plugin": "^3.0.0",
     "compression-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^6.0.3",
     "eslint": "^7.3.1",
