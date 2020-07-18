@@ -10,6 +10,8 @@ const plugins = [
 
   new ManifestPlugin(),
 
+  new CleanWebpackPlugin(),
+
   new ExtractCssChunks({
     filename: env === 'development' ? '[name].css' : '[name].[hash].css',
     chunkFilename: 'assets/css/[name].[hash].css',
