@@ -1,8 +1,7 @@
 import React from 'react';
 import HomeStyle from './Home.scss';
 import { WELCOME_HEADING, IMG_ALT } from '../../constants/HomeConstants';
-// eslint-disable-next-line import/no-unresolved
-import ReactLogo from '../../assets/images/react.webp';
+import ReactLogo from '../../assets/images/React.webp';
 
 const Home = () => (
   <>
