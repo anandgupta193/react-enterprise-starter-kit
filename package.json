@@ -36,7 +36,7 @@
       }
     },
     "start-dev": {
-      "command": "webpack-dev-server --config ./webpack/client/webpack.dev.config.js --open"
+      "command": "webpack-dev-server --config ./webpack/client/webpack.dev.config.js"
     }
   },
   "keywords": [
