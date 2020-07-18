@@ -1,18 +1,20 @@
 const path = require('path');
-const CopyPlugin = require('copy-webpack-plugin');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const env = process.env.NODE_ENV;
 
 const plugins = [
 
-  new CopyPlugin({
-    patterns: [{ from: './public/index.html' }],
-  }),
+  new ManifestPlugin(),
 
   new ExtractCssChunks({
-    filename: '[name].css',
-    chunkFilename: '[id].css',
+    filename: env === 'development' ? '[name].css' : '[name].[hash].css',
+  }),
+
+  new HtmlWebpackPlugin({
+    template: path.resolve(__dirname, '../public/index.html'),
   }),
 
 ];
@@ -91,5 +93,12 @@ module.exports = {
         },
       },
     },
+    moduleIds: 'hashed',
+    runtimeChunk: 'single',
+  },
+  output: {
+    filename: env === 'development' ? '[name].js' : '[name].[contenthash].js',
+    path: path.resolve(__dirname, '../dist'),
+
   },
 };
