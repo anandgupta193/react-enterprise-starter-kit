@@ -4,7 +4,7 @@
 [![GitHub license](https://img.shields.io/github/license/anandgupta193/react-enterprise-starter-kit)](https://github.com/anandgupta193/react-enterprise-starter-kit/blob/master/LICENSE)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-![Banner](https://user-images.githubusercontent.com/24511864/87847932-68453780-c8f9-11ea-9b42-d10fe22bc99d.png)
+![Banner](https://user-images.githubusercontent.com/24511864/87848141-f8d04780-c8fa-11ea-8dae-3dde9fe6a68d.png)
 
 # react-enterprise-starter-kit :fire:
 
