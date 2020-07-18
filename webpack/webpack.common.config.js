@@ -1,10 +1,13 @@
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const env = process.env.NODE_ENV;
 
 const plugins = [
+
+  new CleanWebpackPlugin(),
 
   new CopyPlugin({
     patterns: [{ from: './public/' }],

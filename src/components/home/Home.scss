@@ -1,69 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 .testToRemove {
-  font: 1em sans-serif;
+    font: 1em sans-serif;
 }
 .logo {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  animation: spin infinite linear;
-}
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
 }
 .heading {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #212121;
-  font-size: 3rem;
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-}
-.github-corner:hover .octo-arm {
-  animation: octocat-wave 560ms ease-in-out;
-}
-@keyframes octocat-wave {
-    0%,
-    100% {
-      transform: rotate(0);
-    }
-    20%,
-    60% {
-      transform: rotate(-25deg);
-    }
-    40%,
-    80% {
-      transform: rotate(10deg);
-    }
-  }
-@-webkit-keyframes octocat-wave {
-  0%,
-  100% {
-    transform: rotate(0);
-  }
-  20%,
-  60% {
-    transform: rotate(-25deg);
-  }
-  40%,
-  80% {
-    transform: rotate(10deg);
-  }
-}
-@media (max-width: 500px) {
-  .github-corner:hover .octo-arm {
-    animation: none;
-  }
-  .github-corner .octo-arm {
-    animation: octocat-wave 560ms ease-in-out;
-  }
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #101010;
 }

@@ -14,7 +14,7 @@
   },
   "betterScripts": {
     "build-dev": {
-      "command": "webpack --progress --config ./webpack.config.js",
+      "command": "webpack --progress --config ./webpack/client/webpack.dev.config.js",
       "env": {
         "NODE_ENV": "development",
         "PORT": 3000
@@ -29,14 +29,14 @@
       }
     },
     "build-prod": {
-      "command": "webpack --progress --config ./webpack.config.js",
+      "command": "webpack --progress --config ./webpack/client/webpack.prod.config.js",
       "env": {
         "NODE_ENV": "production",
         "PORT": 3000
       }
     },
     "start-dev": {
-      "command": "webpack-dev-server --open"
+      "command": "webpack-dev-server --config ./webpack/client/webpack.dev.config.js --open"
     }
   },
   "keywords": [
