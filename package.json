@@ -14,11 +14,7 @@
   },
   "betterScripts": {
     "build-dev": {
-<<<<<<< HEAD
-      "command": "rm -rf dist && webpack --progress --config ./webpack/client/webpack.dev.config.js",
-=======
       "command": "webpack --progress --config ./webpack.config.js",
->>>>>>> Added file-loader and designed home page
       "env": {
         "NODE_ENV": "development",
         "PORT": 3000
@@ -33,11 +29,7 @@
       }
     },
     "build-prod": {
-<<<<<<< HEAD
-      "command": "rm -rf dist && webpack --progress --config ./webpack/client/webpack.prod.config.js",
-=======
       "command": "webpack --progress --config ./webpack.config.js",
->>>>>>> Added file-loader and designed home page
       "env": {
         "NODE_ENV": "production",
         "PORT": 3000

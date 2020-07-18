@@ -1,20 +1,10 @@
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
-<<<<<<< HEAD:webpack/webpack.common.config.js
 
 const env = process.env.NODE_ENV;
 
 const plugins = [
-=======
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-
-const env = process.env.NODE_ENV;
-
-const commonPlugins = [
-  new CleanWebpackPlugin(),
->>>>>>> Added file-loader and designed home page:webpack.config.js
 
   new CopyPlugin({
     patterns: [{ from: './public/' }],
