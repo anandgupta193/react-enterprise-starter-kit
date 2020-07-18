@@ -1,0 +1,19 @@
+# Add 'repo' label to any root file changes
+repo:
+  - any: ['./*']
+
+# Add 'test' label to any change to *.spec.js files within the source dir
+test:
+  - any: ['src/**/*.test.jsx']
+
+# Add 'source' label to any change to src files within the source dir EXCEPT for the docs sub-folder
+source:
+  - any: ['src/**/*', '!src/docs/*']
+
+# Add 'github-workflows' label to any change to workflows files within the .github dir
+github-workflows:
+  - any: ['.github/**/*']
+
+# Add 'webpack' label to any change to workflows files within the webpack dir
+webpack:
+  - any: ['webpack/**/*']

@@ -1,55 +1,28 @@
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const CompressionPlugin = require('compression-webpack-plugin');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const env = process.env.NODE_ENV;
 
-const commonPlugins = [
+const plugins = [
+
+  new CleanWebpackPlugin(),
+
   new CopyPlugin({
-    patterns: [{ from: './public/index.html' }],
+    patterns: [{ from: './public/' }],
   }),
+
   new ExtractCssChunks({
     filename: '[name].css',
     chunkFilename: '[id].css',
   }),
+
 ];
-
-if (process.env.analyze) {
-  commonPlugins.push(
-    new BundleAnalyzerPlugin({
-      openAnalyzer: true,
-      reportFilename: 'bundleReport.html',
-      analyzerMode: 'static',
-      token: 'c3e980d3ec23ddd626fecc110501e76a9a469461',
-    }),
-  );
-}
-
-if (process.env.NODE_ENV === 'production') {
-  commonPlugins.push(
-    new CompressionPlugin({
-      algorithm: 'gzip',
-      filename: '[path].gz[query]',
-      test: /\.(js|jsx)$|\.css$|\.html$/
-      ,
-    }),
-  );
-
-  commonPlugins.push(
-    new OptimizeCssAssetsPlugin({
-      cssProcessorPluginOptions: {
-        preset: ['default', { discardComments: { removeAll: true } }],
-      },
-    }),
-  );
-}
 
 module.exports = {
   entry: {
-    app: [path.resolve(__dirname, 'src/index.jsx')],
+    app: [path.resolve(__dirname, '../src/index.jsx')],
   },
   module: {
     rules: [
@@ -77,7 +50,7 @@ module.exports = {
                 mode: 'local',
                 exportGlobals: true,
                 localIdentName: env === 'development' ? '[name]__[local]__[hash:base64:5]' : '[hash:base64:5]',
-                context: path.resolve(__dirname, 'src'),
+                context: path.resolve(__dirname, '../src'),
                 hashPrefix: 'React Enterprice kit',
               },
             },
@@ -85,7 +58,7 @@ module.exports = {
           {
             loader: '@americanexpress/purgecss-loader',
             options: {
-              paths: [path.join(__dirname, 'src/**/*.{js,jsx}')],
+              paths: [path.join(__dirname, '../src/**/*.{js,jsx}')],
               whitelistPatternsChildren: [/:global$/],
             },
           },
@@ -103,17 +76,21 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|jpe?g|gif|webp)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'assets/images',
+        },
+      },
     ],
   },
   resolve: {
     extensions: ['.js', '.jsx'],
   },
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    port: 3000,
-  },
-  plugins: commonPlugins,
   mode: process.env.NODE_ENV,
+  plugins,
   optimization: {
     splitChunks: {
       name: 'vendor',

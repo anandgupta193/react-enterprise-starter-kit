@@ -1,12 +1,20 @@
-h1 {
-    color: aqua !important;
-}
-.size60 {
-    font-size: 60px;
-}
-::placeholder {
-    color: red($color: #000000);
-}
-.anandsir {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.testToRemove {
     font: 1em sans-serif;
+}
+.logo {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+}
+.heading {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #101010;
 }

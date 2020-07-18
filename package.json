@@ -14,14 +14,14 @@
   },
   "betterScripts": {
     "build-dev": {
-      "command": "webpack --progress --config ./webpack.config.js",
+      "command": "webpack --progress --config ./webpack/client/webpack.dev.config.js",
       "env": {
         "NODE_ENV": "development",
         "PORT": 3000
       }
     },
     "build-dev-analyze": {
-      "command": "webpack -w --progress --config ./webpack.config.js",
+      "command": "webpack -w --progress --config ./webpack/client/webpack.dev.config.js",
       "env": {
         "NODE_ENV": "development",
         "PORT": 3000,
@@ -29,14 +29,14 @@
       }
     },
     "build-prod": {
-      "command": "webpack --progress --config ./webpack.config.js",
+      "command": "webpack --progress --config ./webpack/client/webpack.prod.config.js",
       "env": {
         "NODE_ENV": "production",
         "PORT": 3000
       }
     },
     "start-dev": {
-      "command": "webpack-dev-server"
+      "command": "webpack-dev-server --config ./webpack/client/webpack.dev.config.js --open"
     }
   },
   "keywords": [
@@ -69,17 +69,17 @@
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
-    "redux-saga": "^1.1.3",
-    "redux-thunk": "^2.3.0",
-    "webpack-cli": "^3.3.12",
     "redux-devtools-extension": "^2.13.8",
-    "autoprefixer": "^9.8.5"
+    "redux-saga": "^1.1.3",
+    "autoprefixer": "^9.8.5",
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
     "@americanexpress/purgecss-loader": "^2.0.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.1.0",
     "better-npm-run": "^0.1.1",
+    "clean-webpack-plugin": "^3.0.0",
     "compression-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^6.0.3",
     "eslint": "^7.3.1",
@@ -101,7 +101,8 @@
     "sass-loader": "^9.0.2",
     "webpack": "^4.43.0",
     "webpack-bundle-analyzer": "^3.8.0",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.0.9"
   },
   "husky": {
     "hooks": {
