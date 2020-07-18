@@ -7,7 +7,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const env = process.env.NODE_ENV;
 
 const plugins = [
-
+  new CleanWebpackPlugin(),
   new ManifestPlugin(),
 
   new ExtractCssChunks({
