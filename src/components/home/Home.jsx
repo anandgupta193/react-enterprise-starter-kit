@@ -2,8 +2,7 @@ import React, { Suspense } from 'react';
 import homeStyle from './Home.scss';
 import Loader from '../loader/Loader';
 import { WELCOME_HEADING } from '../../constants/HomeConstants';
-// eslint-disable-next-line import/no-unresolved
-import ReactLogo from '../../assets/images/react.webp';
+import ReactLogo from '../../assets/images/React.webp';
 
 const Home = () => (
   <>
