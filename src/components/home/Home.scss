@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 .testToRemove {
   font: 1em sans-serif;
 }
@@ -25,7 +25,7 @@
   transform: translate(-50%, -50%);
   color: #121212;
   font-size: 3rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat", sans-serif';
   text-align: center;
 }
 .forkongithub a {
@@ -47,7 +47,7 @@
 }
 .forkongithub a::before,
 .forkongithub a::after {
-  content: "";
+  content: '';
   width: 100%;
   display: block;
   position: absolute;
