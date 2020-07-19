@@ -6,7 +6,7 @@
 
 ![Banner](https://user-images.githubusercontent.com/24511864/87848141-f8d04780-c8fa-11ea-8dae-3dde9fe6a68d.png)
 
-# React-Enterprise-Dtarter-Kit :fire:
+# React-Enterprise-Starter-Kit :fire:
 
 Run the following commands to run project in local machine
 

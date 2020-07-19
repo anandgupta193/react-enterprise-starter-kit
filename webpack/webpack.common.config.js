@@ -12,6 +12,7 @@ const plugins = [
 
   new ExtractCssChunks({
     filename: env === 'development' ? '[name].css' : '[name].[hash].css',
+    chunkFilename: 'assets/css/[name].[hash].css',
   }),
 
   new HtmlWebpackPlugin({
@@ -39,7 +40,8 @@ module.exports = {
           {
             loader: ExtractCssChunks.loader,
             options: {
-              reloadAll: true,
+              hmr: process.env.NODE_ENV === 'production',
+              esModule: true,
             },
           },
           {
@@ -77,7 +79,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif|webp)$/i,
+        test: /\.(png|jpe?g|gif|webp|svg)$/i,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
@@ -108,6 +110,6 @@ module.exports = {
   output: {
     filename: env === 'development' ? '[name].js' : '[name].[contenthash].js',
     path: path.resolve(__dirname, '../dist'),
-
+    chunkFilename: 'assets/scripts/[name].[contenthash].js',
   },
 };

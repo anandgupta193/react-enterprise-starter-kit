@@ -105,12 +105,12 @@
     "webpack-manifest-plugin": "^2.2.0",
     "webpack-merge": "^5.0.9"
   },
+  "lint-staged": {
+    "*.{js,jsx}": "npm run eslint"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged && npm run build-prod"
     }
-  },
-  "lint-staged": {
-    "*": "npm run eslint"
   }
 }
