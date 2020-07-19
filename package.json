@@ -112,7 +112,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run build-prod"
+      "pre-commit": "lint-staged && npm run build-prod"
     }
   }
 }
