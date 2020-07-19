@@ -2,11 +2,12 @@ const path = require('path');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const env = process.env.NODE_ENV;
 
 const plugins = [
-
+  new CleanWebpackPlugin(),
   new ManifestPlugin(),
 
   new ExtractCssChunks({
