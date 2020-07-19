@@ -11,7 +11,7 @@ const plugins = [
 
   new ExtractCssChunks({
     filename: env === 'development' ? '[name].css' : '[name].[hash].css',
-    chunkFilename: 'assets/css/[name].[hash].css',
+    chunkFilename: 'css/[name].[hash].css',
   }),
 
   new HtmlWebpackPlugin({
@@ -108,6 +108,6 @@ module.exports = {
   output: {
     filename: env === 'development' ? '[name].js' : '[name].[contenthash].js',
     path: path.resolve(__dirname, '../dist'),
-    chunkFilename: 'assets/scripts/[name].[contenthash].js',
+    chunkFilename: 'scripts/[name].[contenthash].js',
   },
 };
