@@ -40,7 +40,6 @@ module.exports = {
           {
             loader: ExtractCssChunks.loader,
             options: {
-              hmr: process.env.NODE_ENV === 'production',
               esModule: true,
             },
           },

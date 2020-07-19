@@ -1,2 +1,2 @@
 export const WELCOME_HEADING = 'React Enterprise Starter Kit';
-export const BUTTON_TEXT = 'BACK';
+export const IMG_ALT = 'React-Enterprise-Strater-Kit';

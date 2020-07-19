@@ -19,7 +19,7 @@
   font-family: 'Montserrat", sans-serif';
   text-align: center;
 }
-.forkongithub a {
+.forkonGithub a {
   background: #101010;
   color: #fff;
   text-decoration: none;
@@ -32,12 +32,12 @@
   position: relative;
   transition: 0.5s;
 }
-.forkongithub a:hover {
+.forkonGithub a:hover {
   background: #fff;
   color: #000;
 }
-.forkongithub a::before,
-.forkongithub a::after {
+.forkonGithub a::before,
+.forkonGithub a::after {
   content: '';
   width: 100%;
   display: block;
@@ -47,12 +47,12 @@
   height: 1px;
   background: #fff;
 }
-.forkongithub a::after {
+.forkonGithub a::after {
   bottom: 1px;
   top: auto;
 }
 @media screen and (min-width: 800px) {
-  .forkongithub {
+  .forkonGithub {
     position: fixed;
     display: block;
     top: 0;
@@ -62,7 +62,7 @@
     height: 200px;
     z-index: 9999;
   }
-  .forkongithub a {
+  .forkonGithub a {
     width: 200px;
     position: absolute;
     top: 60px;
