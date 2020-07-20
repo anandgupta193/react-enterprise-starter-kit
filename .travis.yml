@@ -22,4 +22,6 @@ jobs:
       skip_cleanup: true
       on:
         push:
-          branches: [ master ]
+          branches:
+            only:
+              - master
