@@ -59,13 +59,6 @@ module.exports = {
             },
           },
           {
-            loader: '@americanexpress/purgecss-loader',
-            options: {
-              paths: [path.join(__dirname, '../src/**/*.{js,jsx}')],
-              whitelistPatternsChildren: [/:global$/],
-            },
-          },
-          {
             loader: 'postcss-loader',
             options: {
               sourceMap: env === 'development',
