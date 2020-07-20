@@ -4,7 +4,7 @@
   "description": "Awesome React Starter Kit that can scale for an enterprise application with the very easy maintainable codebase.",
   "main": "index.jsx",
   "scripts": {
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "start-dev": "better-npm-run start-dev",
     "build-dev": "better-npm-run build-dev",
     "build-prod": "better-npm-run build-prod",
