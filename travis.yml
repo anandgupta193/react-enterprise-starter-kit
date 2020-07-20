@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+- 12
+cache:
+  yarn: false
+  directories:
+  - node_modules
+env:
+  matrix:
+  - CI=true
+jobs:
+  include:
+  - stage: deployment
+    name: Deploy artifacts to Netlify
+    before_deploy:
+    - npm run build-prod
+    - npm install netlify-cli -g
+    deploy:
+      provider: script
+      script: netlify deploy -s $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN -p --dir
+        ./dist
+      skip_cleanup: true
+      on:
+        branch: master
