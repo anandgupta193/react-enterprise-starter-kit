@@ -3,6 +3,7 @@
 ![David](https://img.shields.io/david/dev/anandgupta193/react-enterprise-starter-kit?label=dependencies)
 [![GitHub license](https://img.shields.io/github/license/anandgupta193/react-enterprise-starter-kit)](https://github.com/anandgupta193/react-enterprise-starter-kit/blob/master/LICENSE)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+<a href="https://snyk.io/test/github/anandgupta193/react-enterprise-starter-kit?targetFile=package.json"><img src="https://snyk.io/test/github/anandgupta193/react-enterprise-starter-kit/badge.svg?targetFile=package.json" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io/test/github/anandgupta193/react-enterprise-starter-kit?targetFile=package.json" style="max-width:100%;"></a>
 
 ![Banner](https://user-images.githubusercontent.com/24511864/87848141-f8d04780-c8fa-11ea-8dae-3dde9fe6a68d.png)
 
