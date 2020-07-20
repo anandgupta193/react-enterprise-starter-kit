@@ -21,4 +21,5 @@ jobs:
         ./dist
       skip_cleanup: true
       on:
-        branch: master
+        push:
+          branches: [ master ]
