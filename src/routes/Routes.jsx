@@ -8,14 +8,12 @@ const App = lazy(() => import('../components/App'));
 const Routes = () => (
   <>
     <BrowserRouter>
-      <Switch>
-        <Suspense fallback={<Loader />}>
+      <Suspense fallback={<Loader />}>
+        <Switch>
           <Route path="/" exact component={App} />
-        </Suspense>
-        <Suspense fallback={<Loader />}>
           <Route component={Notfound} />
-        </Suspense>
-      </Switch>
+        </Switch>
+      </Suspense>
     </BrowserRouter>
   </>
 );
