@@ -1,10 +1,19 @@
 const { merge } = require('webpack-merge');
 const path = require('path');
+const Webpack = require('webpack');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const common = require('../webpack.common.config');
 
-const plugins = [new StylelintPlugin()];
+const plugins = [
+  new Webpack.DefinePlugin({
+    __CLIENT__: true,
+    __SERVER__: false,
+    __DEVELOPMENT__: true,
+    __DEVTOOLS__: true,
+  }),
+  new StylelintPlugin(),
+];
 
 if (process.env.analyze) {
   plugins.push(

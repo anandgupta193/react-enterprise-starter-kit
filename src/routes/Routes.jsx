@@ -1,9 +1,7 @@
-import React, { lazy, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Loader from '../components/loader/Loader';
-
-const Notfound = lazy(() => import('../components/404/NotFound'));
-const App = lazy(() => import('../components/App'));
+import { NotFound, App } from './Routes.lazy';
 
 const Routes = () => (
   <>
@@ -11,7 +9,7 @@ const Routes = () => (
       <Suspense fallback={<Loader />}>
         <Switch>
           <Route path="/" exact component={App} />
-          <Route component={Notfound} />
+          <Route component={NotFound} />
         </Switch>
       </Suspense>
     </BrowserRouter>

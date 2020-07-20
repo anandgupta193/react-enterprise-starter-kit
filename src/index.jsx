@@ -9,8 +9,14 @@ import rootSagas from './sagas';
 import Routes from './routes/Routes';
 
 const sagaMiddleware = createSagaMiddleware();
+let middlware = applyMiddleware(sagaMiddleware);
 
-const store = createStore(reducers, composeWithDevTools(applyMiddleware(sagaMiddleware)));
+// adding redux devtools for developmennt mode
+if (__DEVELOPMENT__) {
+  middlware = composeWithDevTools(middlware);
+}
+
+const store = createStore(reducers, middlware);
 sagaMiddleware.run(rootSagas);
 
 ReactDOM.render(

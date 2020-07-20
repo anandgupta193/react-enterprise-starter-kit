@@ -7,6 +7,8 @@
     "jest": true
   },
   "globals": {
+    "__DEVELOPMENT__": true,
+    "__SERVER__": true
   },
   "parserOptions": {
     "ecmaVersion": 2020,
