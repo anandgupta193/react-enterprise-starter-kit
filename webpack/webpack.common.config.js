@@ -8,9 +8,9 @@ const env = process.env.NODE_ENV;
 
 const plugins = [
 
-  new ManifestPlugin(),
-
   new CleanWebpackPlugin(),
+
+  new ManifestPlugin(),
 
   new ExtractCssChunks({
     filename: env === 'development' ? '[name].css' : '[name].[hash].css',
