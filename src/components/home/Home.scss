@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 .testToRemove {
     font: 1em sans-serif;
 }
@@ -14,7 +13,7 @@
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #121212;
+  color: #101010;
   font-size: 3rem;
   font-family: 'Montserrat", sans-serif';
   text-align: center;
@@ -88,3 +87,7 @@
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
   }
 }
+body {
+  background: #101010 !important;
+}
+
