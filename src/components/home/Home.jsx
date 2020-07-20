@@ -1,15 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Button from '../../pureComponents/Button/Button';
-import { WELCOME_HEADING, BUTTON_TEXT } from '../../constants/HomeConstants';
-import homeStyle from './Home.scss';
+import HomeStyle from './Home.scss';
+import { WELCOME_HEADING, IMG_ALT } from '../../constants/HomeConstants';
+import ReactLogo from '../../assets/images/React.webp';
 
 const Home = () => (
   <>
-    <h1 className={homeStyle.size60}>
-      {WELCOME_HEADING}
-    </h1>
-    <Button value={<Link to="/">{BUTTON_TEXT}</Link>} />
+    <span className={HomeStyle.forkonGithub}>
+      <a href="https://github.com/anandgupta193/react-enterprise-starter-kit">
+        Fork on GitHub
+      </a>
+    </span>
+    <img className={HomeStyle.logo} alt={IMG_ALT} src={ReactLogo} />
+    <h1 className={HomeStyle.heading}>{WELCOME_HEADING}</h1>
   </>
 );
 export default Home;

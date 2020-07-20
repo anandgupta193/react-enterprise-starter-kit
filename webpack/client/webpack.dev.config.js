@@ -2,6 +2,7 @@ const { merge } = require('webpack-merge');
 const path = require('path');
 const Webpack = require('webpack');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 const common = require('../webpack.common.config');
 
 const plugins = [
@@ -11,6 +12,7 @@ const plugins = [
     __DEVELOPMENT__: true,
     __DEVTOOLS__: true,
   }),
+  new StylelintPlugin(),
 ];
 
 if (process.env.analyze) {

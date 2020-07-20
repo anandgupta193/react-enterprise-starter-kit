@@ -1,12 +1,90 @@
-h1 {
-    color: aqua !important;
-}
-.size60 {
-    font-size: 60px;
-}
-::placeholder {
-    color: red($color: #000000);
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 .testToRemove {
     font: 1em sans-serif;
+}
+.logo {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+}
+.heading {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #121212;
+  font-size: 3rem;
+  font-family: 'Montserrat", sans-serif';
+  text-align: center;
+}
+.forkonGithub a {
+  background: #101010;
+  color: #fff;
+  text-decoration: none;
+  font-family: arial, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 40px;
+  font-size: 1rem;
+  line-height: 2rem;
+  position: relative;
+  transition: 0.5s;
+}
+.forkongithub a {
+  background: #101010;
+  color: #fff;
+  text-decoration: none;
+  font-family: arial, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 40px;
+  font-size: 1rem;
+  line-height: 2rem;
+  position: relative;
+  transition: 0.5s;
+}
+.forkonGithub a:hover {
+  background: #fff;
+  color: #000;
+}
+.forkonGithub a::before,
+.forkonGithub a::after {
+  content: '';
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 1px;
+  background: #fff;
+}
+.forkonGithub a::after {
+  bottom: 1px;
+  top: auto;
+}
+@media screen and (min-width: 800px) {
+  .forkonGithub {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 200px;
+    overflow: hidden;
+    height: 200px;
+    z-index: 9999;
+  }
+  .forkonGithub a {
+    width: 200px;
+    position: absolute;
+    top: 60px;
+    right: -60px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+  }
 }

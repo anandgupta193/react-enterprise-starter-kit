@@ -1,0 +1,6 @@
+{
+  "rules": {
+    'string-quotes': 'single',
+    'no-duplicate-at-import-rules' : true,
+  },
+}

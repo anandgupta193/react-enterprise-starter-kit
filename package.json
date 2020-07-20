@@ -14,7 +14,7 @@
   },
   "betterScripts": {
     "build-dev": {
-      "command": "rm -rf dist && webpack --progress --config ./webpack/client/webpack.dev.config.js",
+      "command": "webpack --progress --config ./webpack/client/webpack.dev.config.js",
       "env": {
         "NODE_ENV": "development",
         "PORT": 3000
@@ -29,14 +29,14 @@
       }
     },
     "build-prod": {
-      "command": "rm -rf dist && webpack --progress --config ./webpack/client/webpack.prod.config.js",
+      "command": "webpack --progress --config ./webpack/client/webpack.prod.config.js",
       "env": {
         "NODE_ENV": "production",
         "PORT": 3000
       }
     },
     "start-dev": {
-      "command": "webpack-dev-server --config ./webpack/client/webpack.dev.config.js"
+      "command": "webpack-dev-server --config ./webpack/client/webpack.dev.config.js --open"
     }
   },
   "keywords": [
@@ -79,6 +79,7 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.1.0",
     "better-npm-run": "^0.1.1",
+    "clean-webpack-plugin": "^3.0.0",
     "compression-webpack-plugin": "^4.0.0",
     "eslint": "^7.3.1",
     "eslint-config-airbnb": "^18.2.0",
@@ -98,18 +99,20 @@
     "react-test-renderer": "^16.13.1",
     "sass": "^1.26.10",
     "sass-loader": "^9.0.2",
+    "stylelint": "^13.6.1",
+    "stylelint-webpack-plugin": "^2.1.0",
     "webpack": "^4.43.0",
     "webpack-bundle-analyzer": "^3.8.0",
     "webpack-dev-server": "^3.11.0",
     "webpack-manifest-plugin": "^2.2.0",
     "webpack-merge": "^5.0.9"
   },
+  "lint-staged": {
+    "*.{js,jsx}": "npm run eslint"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged && npm run build-prod"
     }
-  },
-  "lint-staged": {
-    "*.{js,jsx}": "npm run eslint"
   }
 }
