@@ -42,6 +42,7 @@ module.exports = {
           {
             loader: ExtractCssChunks.loader,
             options: {
+              hmr: true,
               esModule: true,
             },
           },
@@ -102,8 +103,8 @@ module.exports = {
     runtimeChunk: 'single',
   },
   output: {
-    filename: env === 'development' ? '[name].js' : '[name].[contenthash].js',
+    filename: env === 'development' ? '[name].js' : '[name].[hash].js',
     path: path.resolve(__dirname, '../dist'),
-    chunkFilename: 'scripts/[name].[contenthash].js',
+    chunkFilename: 'scripts/[name].[hash].js',
   },
 };

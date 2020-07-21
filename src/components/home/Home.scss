@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 .testToRemove {
     font: 1em sans-serif;
 }
@@ -15,7 +16,7 @@
   transform: translate(-50%, -50%);
   color: #ffffff;
   font-size: 3rem;
-  font-family: 'Montserrat", sans-serif';
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
 .forkonGithub a {
@@ -63,7 +64,7 @@
   bottom: 1px;
   top: auto;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 300px) {
   .forkonGithub {
     position: fixed;
     display: block;
