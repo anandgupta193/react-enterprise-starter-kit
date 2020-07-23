@@ -6,6 +6,4 @@ export default { title: 'Button' };
 
 export const withText = () => <Button value="text" />;
 
-export const withEmoji = () => (
-  <Button value="text" />
-);
+export const withEmoji = () => <Button value="text" />;

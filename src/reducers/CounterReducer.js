@@ -1,4 +1,7 @@
-import { INCREMENT_SUCCESS, DECREMENT_SUCCESS } from '../actionTypes/CounterActionTypes';
+import {
+  INCREMENT_SUCCESS,
+  DECREMENT_SUCCESS,
+} from '../actionTypes/CounterActionTypes';
 
 const counter = (state = 1, action) => {
   switch (action.type) {

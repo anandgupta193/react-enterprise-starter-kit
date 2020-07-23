@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 .testToRemove {
-    font: 1em sans-serif;
+  font: 1em sans-serif;
 }
 .logo {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 300px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
 }
 .heading {
   position: absolute;
@@ -91,4 +91,3 @@
 body {
   background: #101010 !important;
 }
-
