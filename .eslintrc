@@ -32,7 +32,7 @@
   },
   "rules": {
       "no-console": "error",
-      "max-len": ["error", 120, { "code": 80 }],
+      "max-len": ["error", 140, { "code": 80 }],
       "import/no-extraneous-dependencies": "off",
       "quotes": ["error", "single", { "allowTemplateLiterals": true }]
   },

@@ -1,8 +1,5 @@
 import { takeLatest, put } from 'redux-saga/effects';
-import {
-  INCREMENT,
-  INCREMENT_SUCCESS,
-} from '../actionTypes/CounterActionTypes';
+import { INCREMENT, INCREMENT_SUCCESS } from '../actionTypes/CounterActionTypes';
 // import RestClient from '../Utils/RestClient';
 
 function* incrementUserCountSaga() {

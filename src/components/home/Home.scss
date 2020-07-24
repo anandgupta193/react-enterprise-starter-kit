@@ -4,11 +4,19 @@
   font: 1em sans-serif;
 }
 .logo {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 220px;
+  animation: spin 12s infinite linear;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .heading {
   position: absolute;
@@ -19,6 +27,15 @@
   font-size: 3rem;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
+}
+.badges {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  img {
+    margin-left: 10px;
+  }
 }
 .forkonGithub a {
   background: #101010;
