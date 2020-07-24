@@ -5,6 +5,4 @@ export default { title: 'Home' };
 
 export const withText = () => <Button value="Hello" />;
 
-export const withEmoji = () => (
-  <Button value="hy" />
-);
+export const withEmoji = () => <Button value="hy" />;

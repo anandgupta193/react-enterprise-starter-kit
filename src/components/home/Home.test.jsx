@@ -1,8 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import {
-  WELCOME_HEADING,
-} from '../../constants/HomeConstants';
+import { WELCOME_HEADING } from '../../constants/HomeConstants';
 import Home from './Home';
 
 describe('[Home Component Test Suite]', () => {
