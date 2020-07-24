@@ -11,7 +11,8 @@
     "build-analyze": "better-npm-run build-dev-analyze",
     "eslint": "eslint --config ./.eslintrc --ext .js,jsx ./src --fix",
     "storybook": "start-storybook",
-    "prettify": "prettier  --config ./.prettierrc --ext .js,jsx,.scss ./src --write"
+    "prettify": "prettier  --config ./.prettierrc --ext .js,jsx,.scss ./src --write",
+    "stylelint": "stylelint  --config ./.stylelintrc --aei .scss ./src"
   },
   "betterScripts": {
     "build-dev": {
