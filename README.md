@@ -1,4 +1,4 @@
-![Node.js CI](https://github.com/anandgupta193/react-enterprise-starter-kit/workflows/Node.js%20CI/badge.svg?branch=master)
+![CI](https://github.com/anandgupta193/react-enterprise-starter-kit/workflows/Node.js%20CI/badge.svg?branch=master)
 ![GitHub last commit](https://img.shields.io/github/last-commit/anandgupta193/react-enterprise-starter-kit)
 [![GitHub license](https://img.shields.io/github/license/anandgupta193/react-enterprise-starter-kit)](https://github.com/anandgupta193/react-enterprise-starter-kit/blob/master/LICENSE)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
