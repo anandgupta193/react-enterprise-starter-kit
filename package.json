@@ -63,6 +63,8 @@
     "@babel/node": "^7.10.3",
     "@storybook/react": "^5.3.19",
     "axios": "^0.19.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",

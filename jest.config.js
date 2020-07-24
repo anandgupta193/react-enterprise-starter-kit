@@ -6,4 +6,20 @@ module.exports = {
     '\\.(css|scss|less)$': 'identity-obj-proxy',
   },
   setupFilesAfterEnv: ['<rootDir>/src/tests/__mocks__/SetupTests.js'],
+  coverageReporters: ['json', ['lcov', { projectRoot: './' }]],
+  collectCoverage: true,
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx}',
+    '!src/tests/**/*',
+    '!src/index.jsx',
+    '!src/**/*.story.{js,jsx}',
+  ],
+  coverageThreshold: {
+    global: {
+      branches: 0,
+      functions: 23,
+      lines: 31,
+      statements: 31,
+    },
+  },
 };

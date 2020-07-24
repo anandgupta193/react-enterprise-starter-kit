@@ -8,4 +8,5 @@ const NotFound = () => (
     <h4>{ERROR_TEXT}</h4>
   </>
 );
+
 export default NotFound;
