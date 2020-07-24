@@ -2,6 +2,8 @@ const path = require('path');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const env = process.env.NODE_ENV;
 
@@ -18,6 +20,13 @@ const plugins = [
 
   new HtmlWebpackPlugin({
     template: path.resolve(__dirname, '../public/index.html'),
+  }),
+  new CopyPlugin({
+    patterns: [
+      {
+        from: path.resolve(__dirname, '../public'),
+      },
+    ],
   }),
 ];
 
