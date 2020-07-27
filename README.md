@@ -9,7 +9,7 @@
 
 # React-Enterprise-Starter-Kit :fire:
 
-### Demo - https://distracted-knuth-6fa18c.netlify.app/
+Demo - https://reactenterprisestarterkit.netlify.app/
 
 Run the following commands to run project in local machine
 
