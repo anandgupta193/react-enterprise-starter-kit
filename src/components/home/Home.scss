@@ -14,20 +14,19 @@
   }
 }
 .heading {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   color: #ffffff;
   font-size: 3rem;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
 .badges {
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   img {
     margin-left: 10px;
   }
@@ -103,8 +102,6 @@
 }
 body {
   background: #101010 !important;
+  margin: 0;
 }
 
-.cloud {
-  margin-bottom: 75px;
-}
