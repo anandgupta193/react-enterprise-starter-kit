@@ -1,8 +1,8 @@
 .loader {
-  position: absolute;
-  top: 40%;
-  left: 46%;
-  transform: translate(-50%, -50%);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50%;
   border: 16px solid #f3f3f3; /* Light grey */
   border-top: 16px solid gray; /* Blue */
   border-radius: 50%;
