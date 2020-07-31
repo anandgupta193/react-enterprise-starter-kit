@@ -3,17 +3,15 @@ const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-
+const { GenerateSW } = require('workbox-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const env = process.env.NODE_ENV;
 
 const plugins = [
-
   new CleanWebpackPlugin(),
-
   new ManifestPlugin(),
-
   new ExtractCssChunks({
     filename: env === 'development' ? '[name].css' : '[name].[hash].css',
     chunkFilename: 'css/[name].[hash].css',
@@ -26,6 +24,36 @@ const plugins = [
     patterns: [
       {
         from: path.resolve(__dirname, '../public'),
+      },
+    ],
+  }),
+  new GenerateSW({
+    cacheId: 'React Enterprise Starter Kit',
+    navigateFallback: 'index.html',
+    maximumFileSizeToCacheInBytes: 5000000,
+    clientsClaim: true,
+    cleanupOutdatedCaches: true,
+  }),
+  new WebpackPwaManifest({
+    name: 'React Enterprise Starter Kit',
+    short_name: 'Application',
+    description: 'Description!',
+    background_color: '#01579b',
+    theme_color: '#01579b',
+    start_url: '/',
+    prefer_related_applications: true,
+    icons: [
+      {
+        src: 'public/react.png',
+        sizes: '512x512',
+        type: 'image/png',
+        purpose: 'any maskable',
+        destination: path.join('assets', 'icons'),
+      },
+      {
+        src: path.resolve('public/react.png'),
+        sizes: [96, 128, 192, 256, 384],
+        destination: path.join('assets', 'icons'),
       },
     ],
   }),
