@@ -119,7 +119,7 @@
     "webpack-dev-server": "^3.11.0",
     "webpack-manifest-plugin": "^2.2.0",
     "webpack-merge": "^5.0.9",
-    "webpack-pwa-manifest": "^4.2.0",
+    "workbox-precaching": "^5.1.3",
     "workbox-webpack-plugin": "^5.1.3"
   },
   "lint-staged": {
