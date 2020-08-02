@@ -1,0 +1,44 @@
+{
+    "icons": [
+      {
+        "src": "react.png",
+        "sizes": "384x384",
+        "type": "image/png"
+      },
+      {
+        "src": "react.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      },
+      {
+        "src": "react.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "react.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      },
+      {
+        "src": "react.png",
+        "sizes": "96x96",
+        "type": "image/png"
+      },
+      {
+        "src": "react.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ],
+    "name": "React Enterprise Starter Kit",
+    "short_name": "Application",
+    "orientation": "portrait",
+    "display": "standalone",
+    "start_url": "/",
+    "description": "Description!",
+    "background_color": "#01579b",
+    "theme_color": "#01579b",
+    "prefer_related_applications": true
+  }
