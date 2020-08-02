@@ -13,18 +13,20 @@ import ReactLogo from '../../assets/images/React.webp';
 import CloudsImage from '../../assets/images/wavesOpacity.svg';
 
 const Home = () => (
-  <div className={HomeStyles.app}>
+  <>
     <img alt="Clouds" src={CloudsImage} />
     <span className={HomeStyles.forkonGithub}>
       <a href={REPO_URL}>{GITHUB_FORK_TEXT}</a>
     </span>
-    <img className={HomeStyles.logo} alt={IMG_ALT} src={ReactLogo} />
-    <h1 className={HomeStyles.heading}>{WELCOME_HEADING}</h1>
-    <div className={HomeStyles.badges}>
-      <img alt="License Badges" src={LICENCE_BADGE} />
-      <img alt="Stars Badges" src={FORK_BADGE} />
-      <img alt="Forks Badges" src={STARS_BADGE} />
+    <div className={HomeStyles.app}>
+      <img className={HomeStyles.logo} alt={IMG_ALT} src={ReactLogo} />
+      <h1 className={HomeStyles.heading}>{WELCOME_HEADING}</h1>
+      <div className={HomeStyles.badges}>
+        <img alt="License Badges" src={LICENCE_BADGE} />
+        <img alt="Stars Badges" src={FORK_BADGE} />
+        <img alt="Forks Badges" src={STARS_BADGE} />
+      </div>
     </div>
-  </div>
+  </>
 );
 export default Home;
