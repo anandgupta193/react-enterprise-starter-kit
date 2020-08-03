@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "anandgupta193",
+      "name": "Anand gupta",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/24511864?v=4",
+      "profile": "https://github.com/anandgupta193",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "react-enterprise-starter-kit",
+  "projectOwner": "anandgupta193",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
