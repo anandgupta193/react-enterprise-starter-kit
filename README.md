@@ -13,15 +13,36 @@ Demo - https://reactenterprisestarterkit.netlify.app/
 
 Run the following commands to run project in local machine
 
+To Create development build
+
 ```bash
 npm run build-dev
 ```
 
-To Create production build run
+To Create production build
 
 ```bash
 npm run build-prod
 ```
+
+To run test cases
+
+```bash
+npm run test
+```
+
+To run storybook
+
+```bash
+npm run storybook
+```
+
+To run Bundle Analyzer
+
+```bash
+build-analyze
+```
+
 
 ## Contributors ✨
 
