@@ -9,7 +9,38 @@
 
 # React-Enterprise-Starter-Kit :fire:
 
+Highly Scalable, performant and perfect react boilerplate for react developers to get started.
+
+## Features: 
+
+  Completely based on latest react hooks.
+  
+  Redux store is in place with saga as middleware.
+  
+  Complete control over webpack for dev and production builds.
+  
+  Comes with all eslint standard rules for consistent codebase.
+  
+  Highly Scalable due to its atomic design.
+  
+  React router with lazy loding features for better performance and route based chunking.
+  
+  Server side rendering for faster page load.
+  
+  Progressive web app with customizable service worker.
+  
+  Google Lighthouse score is 100 for performance, accessibility, best practices, SEO and PWA.
+  
+  Configurable Test cases setup using latest react testing library with complete HTML coverage report.
+  
+  Continious Integration and Deployment is setup using Travis and Netlify.
+  
+  Github actions for labeling your PR's and build passing status checks using Node CI.
+  
+
 Demo - https://reactenterprisestarterkit.netlify.app/
+
+
 
 Run the following commands to run project in local machine
 
