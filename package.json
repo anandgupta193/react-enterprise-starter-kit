@@ -63,8 +63,8 @@
   "author": "Anand (@aanandgupta193) & Shubham (@shubhamsWEB)",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.10.3",
-    "@babel/node": "^7.10.3",
+    "@babel/core": "^7.10.5",
+    "@babel/node": "^7.10.5",
     "@storybook/react": "^5.3.19",
     "axios": "^0.19.2",
     "eslint-plugin-prettier": "^3.1.4",
