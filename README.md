@@ -40,7 +40,7 @@ npm run storybook
 To run Bundle Analyzer
 
 ```bash
-build-analyze
+npm run build-analyze
 ```
 
 
