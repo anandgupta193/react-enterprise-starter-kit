@@ -36,6 +36,8 @@ Highly Scalable, performant and perfect react boilerplate for react developers t
   
   * Continious Integration and Deployment is setup using Travis and Netlify.
   
+  * Component documentation using React Storybook.
+  
   * Github actions for labeling your PR's and build passing status checks using Node CI.
   
 
