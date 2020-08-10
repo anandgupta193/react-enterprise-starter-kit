@@ -47,6 +47,12 @@ Highly Scalable, performant and perfect react boilerplate for react developers t
 
 Run the following commands to run project in local machine
 
+To start the project
+
+```bash
+npm run start-dev
+```
+
 To Create development build
 
 ```bash
