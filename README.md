@@ -10,7 +10,7 @@
 
 # React-Enterprise-Starter-Kit :fire:
 
-Highly Scalable, performant and perfect react boilerplate for react developers to get started.
+Highly Scalable, performant and amazing react boilerplate for react developers to get started and improve web building capabilities.
 
 ## Features: 
 
