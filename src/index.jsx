@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import Routes from './routes/Routes';
 import Store from './redux/store';
 
-ReactDOM.hydrate(
+ReactDOM.render(
   <Provider store={Store}>
     <Routes />
   </Provider>,
