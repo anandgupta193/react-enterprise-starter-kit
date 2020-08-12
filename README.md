@@ -8,7 +8,7 @@
 
 ![Banner](https://user-images.githubusercontent.com/24511864/87848141-f8d04780-c8fa-11ea-8dae-3dde9fe6a68d.png)
 
-# React-Enterprise-Starter-Kit :fire:
+# React Enterprise Starter Kit :fire:
 
 Highly Scalable, performant and amazing react boilerplate for react developers to get started and improve web building capabilities.
 
