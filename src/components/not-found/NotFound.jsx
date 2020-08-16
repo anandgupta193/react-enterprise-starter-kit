@@ -1,12 +1,12 @@
 import React from 'react';
-
+import Styles from './NotFound.scss';
 import { ERROR_CODE, ERROR_TEXT } from '../../constants/404Constants';
 
 const NotFound = () => (
-  <>
-    <h1>{ERROR_CODE}</h1>
-    <h4>{ERROR_TEXT}</h4>
-  </>
+  <div className={Styles.container}>
+    <h2 className={Styles.bold}>{ERROR_CODE}</h2>
+    <h2>{ERROR_TEXT}</h2>
+  </div>
 );
 
 export default NotFound;

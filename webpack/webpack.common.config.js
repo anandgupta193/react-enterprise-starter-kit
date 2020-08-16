@@ -3,7 +3,6 @@ const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const { InjectManifest } = require('workbox-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const env = process.env.NODE_ENV;
@@ -27,11 +26,6 @@ const plugins = [
         from: path.resolve(__dirname, '../public'),
       },
     ],
-  }),
-  new InjectManifest({
-    swSrc: path.resolve(__dirname, '../src/service-worker.js'),
-    dontCacheBustURLsMatching: /\.[0-9a-f]{8}\./,
-    maximumFileSizeToCacheInBytes: 5000000,
   }),
 ];
 
