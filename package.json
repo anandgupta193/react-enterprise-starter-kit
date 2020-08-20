@@ -12,9 +12,27 @@
     "eslint": "eslint --config ./.eslintrc --ext .js,jsx ./src --fix",
     "storybook": "start-storybook",
     "prettify": "prettier  --config ./.prettierrc --ext .js,jsx,.scss ./src --write",
-    "stylelint": "stylelint  --config ./.stylelintrc --aei .scss ./src"
+    "stylelint": "stylelint  --config ./.stylelintrc --aei .scss ./src",
+    "build-dev-ssr": "npm run build-dev && better-npm-run build-dev-ssr",
+    "build-prod-ssr": "npm run build-prod && better-npm-run build-prod-ssr",
+    "start-dev-ssr": "npm run build-dev-ssr && node ./server-build/server.js --inspect",
+    "start-prod-ssr": "npm run build-prod-ssr && node ./server-build/server.js"
   },
   "betterScripts": {
+    "build-dev-ssr": {
+      "command": "webpack --progress --config ./webpack/server/webpack.dev.config.js",
+      "env": {
+        "NODE_ENV": "development",
+        "PORT": 3000
+      }
+    },
+    "build-prod-ssr": {
+      "command": "webpack --progress --config ./webpack/server/webpack.prod.config.js",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": 3000
+      }
+    },
     "build-dev": {
       "command": "webpack --progress --config ./webpack/client/webpack.dev.config.js",
       "env": {
@@ -78,6 +96,7 @@
     "redux-saga": "^1.1.3"
   },
   "devDependencies": {
+    "@babel/polyfill": "^7.10.4",
     "@babel/preset-env": "^7.10.3",
     "@babel/preset-react": "^7.10.1",
     "@testing-library/jest-dom": "^5.11.1",
@@ -102,6 +121,7 @@
     "html-webpack-plugin": "^4.3.0",
     "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
+    "ignore-styles": "^5.0.1",
     "jest": "^26.1.0",
     "lint-staged": "^10.2.11",
     "nodemon": "^2.0.4",
@@ -120,7 +140,8 @@
     "webpack-manifest-plugin": "^2.2.0",
     "webpack-merge": "^5.0.9",
     "workbox-precaching": "^5.1.3",
-    "workbox-webpack-plugin": "^5.1.3"
+    "workbox-webpack-plugin": "^5.1.3",
+    "webpack-node-externals": "^2.5.0"
   },
   "lint-staged": {
     "*.{js,jsx}": "npm run eslint"

@@ -18,12 +18,12 @@ const plugins = [
   }),
 
   new HtmlWebpackPlugin({
-    template: path.resolve(__dirname, '../public/index.html'),
+    template: path.resolve(__dirname, '../../public/index.html'),
   }),
   new CopyPlugin({
     patterns: [
       {
-        from: path.resolve(__dirname, '../public'),
+        from: path.resolve(__dirname, '../../public'),
       },
     ],
   }),
@@ -31,7 +31,7 @@ const plugins = [
 
 module.exports = {
   entry: {
-    app: [path.resolve(__dirname, '../src/index.jsx')],
+    app: [path.resolve(__dirname, '../../src/index.jsx')],
   },
   module: {
     rules: [
@@ -60,7 +60,7 @@ module.exports = {
                 mode: 'local',
                 exportGlobals: true,
                 localIdentName: env === 'development' ? '[name]__[local]__[hash:base64:5]' : '[hash:base64:5]',
-                context: path.resolve(__dirname, '../src'),
+                context: path.resolve(__dirname, '../../src'),
                 hashPrefix: 'React Enterprice kit',
               },
             },
@@ -110,7 +110,7 @@ module.exports = {
   },
   output: {
     filename: env === 'development' ? '[name].js' : '[name].[hash].js',
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(__dirname, '../../dist'),
     chunkFilename: 'scripts/[name].[hash].js',
   },
 };
