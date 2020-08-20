@@ -16,6 +16,7 @@ if (__DEVELOPMENT__) {
 const initialState = !__SERVER__ ? window.__PRELOADED__STATE__ : {};
 
 const store = createStore(reducers, initialState, middleware);
+
 if (__SERVER__) {
   store.runSaga = sagaMiddleware.run;
 } else {

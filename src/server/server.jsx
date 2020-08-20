@@ -25,6 +25,7 @@ server.get('/', (req, res) => {
     '<div id="root"></div>',
     `<div id="root">${content}</div>${preloadedState}`,
   );
+
   res.status(200).send(serverRenderedHTML);
   // store.runSaga(rootSagas).toPromise()
   //   .then(() => {
@@ -44,6 +45,7 @@ if (!__DEVELOPMENT__) {
     console.log(req.url);
     res.set('Content-Encoding', 'gzip');
     res.set('Content-Type', contentType);
+    console.log(`Serving gzipped JS, ${req.url}`);
     next();
   };
   server.get('*.js', encodeResToGzip('text/javascript'));
