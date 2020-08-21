@@ -9,8 +9,8 @@ const Routes = () => (
     <BrowserRouter>
       <Suspense fallback={<Loader />}>
         <Switch>
-          <Route path="/" exact component={App} />
-          <Route component={NotFound} />
+          <Route exact path="/" component={App} />
+          <Route exact path="/notfound" component={NotFound} />
         </Switch>
       </Suspense>
     </BrowserRouter>
