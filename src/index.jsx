@@ -5,13 +5,14 @@ import { Provider } from 'react-redux';
 import Routes from './routes/Routes';
 import Store from './redux/store';
 
-ReactDOM.render(
+ReactDOM.hydrate(
   <Provider store={Store}>
     <Routes />
   </Provider>,
   document.getElementById('root'),
 );
-if (!__DEVELOPMENT__) {
+
+if (!__DEVELOPMENT__ && !__SERVER__) {
   (function () {
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
