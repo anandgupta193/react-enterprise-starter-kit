@@ -1,6 +1,5 @@
 ![CI](https://github.com/anandgupta193/react-enterprise-starter-kit/workflows/Node.js%20CI/badge.svg?branch=master)
 ![GitHub last commit](https://img.shields.io/github/last-commit/anandgupta193/react-enterprise-starter-kit)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/anandgupta193/react-enterprise-starter-kit.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/anandgupta193/react-enterprise-starter-kit/context:javascript)
 [![GitHub license](https://img.shields.io/github/license/anandgupta193/react-enterprise-starter-kit)](https://github.com/anandgupta193/react-enterprise-starter-kit/blob/master/LICENSE)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 [![Build Status](https://travis-ci.com/anandgupta193/react-enterprise-starter-kit.svg?branch=master)](https://travis-ci.com/anandgupta193/react-enterprise-starter-kit)
