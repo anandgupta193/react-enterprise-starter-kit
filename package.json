@@ -81,7 +81,7 @@
   "author": "Anand (@aanandgupta193) & Shubham (@shubhamsWEB)",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.12.1",
+    "@babel/core": "^7.12.3",
     "@babel/node": "^7.12.1",
     "@storybook/react": "^5.3.21",
     "axios": "^0.20.0",
