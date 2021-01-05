@@ -83,7 +83,7 @@
   "dependencies": {
     "@babel/core": "^7.12.10",
     "@babel/node": "^7.12.1",
-    "@storybook/react": "^6.1.6",
+    "@storybook/react": "^6.1.11",
     "axios": "^0.21.0",
     "eslint-plugin-prettier": "^3.3.0",
     "prop-types": "^15.7.2",
