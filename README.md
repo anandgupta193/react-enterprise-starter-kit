@@ -94,7 +94,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/anandgupta193"><img src="https://avatars2.githubusercontent.com/u/24511864?v=4" width="100px;" alt=""/><br /><sub><b>Anand Gupta</b></sub></a><br /><a href="https://github.com/anandgupta193/react-enterprise-starter-kit/commits?author=anandgupta193" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/shubhamsWEB"><img src="https://avatars2.githubusercontent.com/u/32464238?v=4" width="100px;" alt=""/><br /><sub><b>Shubham Agrawal</b></sub></a><br /><a href="https://github.com/anandgupta193/react-enterprise-starter-kit/commits?author=anandgupta193" title="Code">💻</a></td>
+   <td align="center"><a href="https://github.com/akhileshbhatia"><img src="https://avatars2.githubusercontent.com/u/10994002?v=4" width="100px;" alt=""/><br /><sub><b>Akhilesh Bhatia</b></sub></a><br /><a href="https://github.com/anandgupta193/react-enterprise-starter-kit/commits?author=anandgupta193" title="Code">💻</a></td>
   </tr>
+ 
+ 
+
 </table>
 
 <!-- markdownlint-enable -->
