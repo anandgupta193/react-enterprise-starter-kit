@@ -13,7 +13,7 @@ ReactDOM.render(
 );
 
 if (!__DEVELOPMENT__ && !__SERVER__) {
-  (function () {
+  const registerServiceWorker = () => {
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/service-worker.js').then((registration) => {
@@ -23,5 +23,6 @@ if (!__DEVELOPMENT__ && !__SERVER__) {
         });
       });
     }
-  }());
+  };
+  registerServiceWorker();
 }
