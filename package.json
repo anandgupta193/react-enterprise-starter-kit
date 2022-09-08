@@ -134,14 +134,14 @@
     "stylelint": "^13.6.1",
     "stylelint-webpack-plugin": "^2.1.0",
     "webpack": "^4.43.0",
-    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-bundle-analyzer": "^4.6.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-manifest-plugin": "^2.2.0",
     "webpack-merge": "^5.0.9",
     "webpack-node-externals": "^2.5.0",
     "workbox-precaching": "^5.1.3",
-    "workbox-webpack-plugin": "^5.1.3"
+    "workbox-webpack-plugin": "^6.5.4"
   },
   "lint-staged": {
     "*.{js,jsx}": "npm run eslint"
