@@ -13,7 +13,7 @@ Highly Scalable, performant and amazing react boilerplate for react developers t
 
 ## Features: 
 
-  * Completely based on latest react hooks.
+  * Completely based on latest react hooks using React version ^18.2.0.
   
   * Redux store is in place with saga as middleware.
   
