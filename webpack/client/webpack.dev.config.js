@@ -29,7 +29,9 @@ if (process.env.analyze) {
 module.exports = merge(common, {
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: path.join(__dirname, '../../dist'),
+    static: {
+      directory: path.join(__dirname, '../../dist'),
+    },
     port: 3000,
     hot: true,
   },
