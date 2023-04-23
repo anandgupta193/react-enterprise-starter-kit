@@ -1,24 +1,28 @@
 const path = require('path');
-const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
-const ManifestPlugin = require('webpack-manifest-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
-const env = process.env.NODE_ENV;
+const env = process?.env?.NODE_ENV || 'development';
+const isDevEnv = env === 'development'
 
 const plugins = [
+  new StylelintPlugin(),
   new CleanWebpackPlugin(),
-  new ManifestPlugin({
+  new WebpackManifestPlugin({
     fileName: 'asset-manifest.json',
   }),
-  new ExtractCssChunks({
-    filename: env === 'development' ? '[name].css' : '[name].[hash].css',
-    chunkFilename: 'css/[name].[hash].css',
-  }),
-
   new HtmlWebpackPlugin({
-    template: path.resolve(__dirname, '../../public/index.html'),
+    template: path.resolve(__dirname, '../../public/template.html'),
+    filename: 'index.html'
+  }),
+  new MiniCssExtractPlugin({
+    filename: isDevEnv ? 'css/[name].css' : 'css/[name].[contenthash].css',
+    chunkFilename: isDevEnv ? 'css/[id].css' : 'css/[id].[contenthash].css',
   }),
   new CopyPlugin({
     patterns: [
@@ -43,38 +47,30 @@ module.exports = {
         },
       },
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.scss$/,
         use: [
-          {
-            loader: ExtractCssChunks.loader,
-            options: {
-              hmr: true,
-              esModule: true,
-            },
-          },
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
-              sourceMap: env === 'development',
+              sourceMap: isDevEnv,
               modules: {
                 mode: 'local',
                 exportGlobals: true,
-                localIdentName: env === 'development' ? '[name]__[local]__[hash:base64:5]' : '[hash:base64:5]',
-                context: path.resolve(__dirname, '../../src'),
-                hashPrefix: 'React Enterprice kit',
+                localIdentName: isDevEnv ? '[name]__[local]' : '[hash:base64:5]',
               },
             },
           },
           {
             loader: 'postcss-loader',
             options: {
-              sourceMap: env === 'development',
+              sourceMap: isDevEnv,
             },
           },
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: env === 'development',
+              sourceMap: isDevEnv,
             },
           },
         ],
@@ -92,25 +88,36 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
-  mode: process.env.NODE_ENV,
+  mode: env,
   plugins,
   optimization: {
     splitChunks: {
       name: 'vendor',
       chunks: 'all',
+      minSize: 20000,
+      maxAsyncRequests: 30,
+      maxInitialRequests: 30,
+      automaticNameDelimiter: '~',
+      enforceSizeThreshold: 50000,
+      maxSize: 250000,
       minChunks: 1,
       cacheGroups: {
         defaultVendors: {
           test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+          filename: '[name].[contenthash].js',
         },
       },
     },
-    moduleIds: 'hashed',
+    moduleIds: 'deterministic',
     runtimeChunk: 'single',
+    minimizer: [
+      new CssMinimizerPlugin()
+    ]
   },
   output: {
-    filename: env === 'development' ? '[name].js' : '[name].[hash].js',
+    filename: isDevEnv ? 'scripts/[name].js' : 'scripts/[name].[hash].js',
     path: path.resolve(__dirname, '../../dist'),
-    chunkFilename: 'scripts/[name].[hash].js',
+    chunkFilename: isDevEnv ? 'scripts/[name].js' : 'scripts/[name].[hash].js'
   },
 };
