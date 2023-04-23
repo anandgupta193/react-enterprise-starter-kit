@@ -14,19 +14,19 @@ Our Enterprise Starter Kit has been specifically designed to give developers a s
 
 Here are some of the key features of our Enterprise Starter Kit:
 
-Highly scalable architecture: Our starter kit is built with scalability in mind, allowing you to easily scale your application as your user base grows.
+* Highly scalable architecture: Our starter kit is built with scalability in mind, allowing you to easily scale your application as your user base grows.
 
-Performant: Our starter kit uses the latest performance optimization techniques to ensure your application is fast and responsive.
+* Performant: Our starter kit uses the latest performance optimization techniques to ensure your application is fast and responsive.
 
-Flexibility: Our starter kit is highly customizable, allowing you to modify and enhance it to suit your specific needs.
+* Flexibility: Our starter kit is highly customizable, allowing you to modify and enhance it to suit your specific needs.
 
-Comprehensive documentation: Our starter kit comes with detailed documentation, making it easy for developers to get up and running quickly.
+* Comprehensive documentation: Our starter kit comes with detailed documentation, making it easy for developers to get up and running quickly.
 
-Built with industry best practices: Our starter kit is built using the latest industry best practices, ensuring your application is secure, maintainable, and easy to deploy.
+* Built with industry best practices: Our starter kit is built using the latest industry best practices, ensuring your application is secure, maintainable, and easy to deploy.
 
-Whether you're a seasoned web developer or just getting started with React, our Enterprise Starter Kit has everything you need to build high-quality web applications quickly and efficiently. So why wait? Download our Starter Kit today and start building amazing web applications!
+* Whether you're a seasoned web developer or just getting started with React, our Enterprise Starter Kit has everything you need to build high-quality web applications quickly and efficiently. So why wait? Download our Starter Kit today and start building amazing web applications!
 
-## Features: 
+## Key Points: 
 
   * Completely based on latest react hooks using React version ^18.2.0.
   
