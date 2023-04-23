@@ -2,7 +2,6 @@ const { merge } = require('webpack-merge');
 const path = require('path');
 const Webpack = require('webpack');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const StylelintPlugin = require('stylelint-webpack-plugin');
 const common = require('./webpack.common.config');
 
 const plugins = [
@@ -12,7 +11,6 @@ const plugins = [
     __DEVELOPMENT__: true,
     __DEVTOOLS__: true,
   }),
-  new StylelintPlugin(),
 ];
 
 if (process.env.analyze) {
@@ -32,7 +30,7 @@ module.exports = merge(common, {
     static: {
       directory: path.join(__dirname, '../../dist'),
     },
-    port: 3000,
+    port: process?.env?.PORT || 3000,
     hot: true,
   },
   plugins,

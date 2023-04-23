@@ -1,11 +1,16 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const nodeExternals = require('webpack-node-externals');
 
 const env = process.env.NODE_ENV;
+const isDevEnv = env === 'development';
 
 const plugins = [
-
+  new MiniCssExtractPlugin({
+    filename: isDevEnv ? 'css/[name].css' : 'css/[name].[contenthash].css',
+    chunkFilename: isDevEnv ? 'css/[id].css' : 'css/[id].[contenthash].css',
+  }),
   new CleanWebpackPlugin(),
 ];
 
@@ -23,31 +28,30 @@ module.exports = {
         },
       },
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.scss$/,
         use: [
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
-              sourceMap: env === 'development',
+              sourceMap: isDevEnv,
               modules: {
                 mode: 'local',
                 exportGlobals: true,
-                localIdentName: env === 'development' ? '[name]__[local]__[hash:base64:5]' : '[hash:base64:5]',
-                context: path.resolve(__dirname, '../../src'),
-                hashPrefix: 'React Enterprice kit',
+                localIdentName: isDevEnv ? '[name]__[local]' : '[hash:base64:5]',
               },
             },
           },
           {
             loader: 'postcss-loader',
             options: {
-              sourceMap: env === 'development',
+              sourceMap: isDevEnv,
             },
           },
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: env === 'development',
+              sourceMap: isDevEnv,
             },
           },
         ],
