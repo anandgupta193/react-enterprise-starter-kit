@@ -1,4 +1,3 @@
-![CI](https://github.com/anandgupta193/react-enterprise-starter-kit/workflows/Node.js%20CI/badge.svg?branch=master)
 ![GitHub last commit](https://img.shields.io/github/last-commit/anandgupta193/react-enterprise-starter-kit)
 [![GitHub license](https://img.shields.io/github/license/anandgupta193/react-enterprise-starter-kit)](https://github.com/anandgupta193/react-enterprise-starter-kit/blob/master/LICENSE)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
@@ -9,7 +8,23 @@
 
 # React Enterprise Starter Kit :fire:
 
-Highly Scalable, performant and amazing react boilerplate for react developers to get started and improve web building capabilities. This react boilerplate is called enterprise starter kit because it is highly scalable and performant, web developers or industries can directly use this starter kit and create multiple projects.
+Introducing the Enterprise Starter Kit, the perfect React boilerplate for web developers and industries looking to improve their web building capabilities. Our Starter Kit is not just highly scalable and performant, it's also incredibly flexible, making it perfect for use in multiple projects.
+
+Our Enterprise Starter Kit has been specifically designed to give developers a solid foundation for building high-quality, feature-rich web applications. With a carefully curated set of tools, frameworks, and libraries, we've created a starter kit that provides a streamlined development experience, allowing you to focus on building your application rather than worrying about the underlying infrastructure.
+
+Here are some of the key features of our Enterprise Starter Kit:
+
+Highly scalable architecture: Our starter kit is built with scalability in mind, allowing you to easily scale your application as your user base grows.
+
+Performant: Our starter kit uses the latest performance optimization techniques to ensure your application is fast and responsive.
+
+Flexibility: Our starter kit is highly customizable, allowing you to modify and enhance it to suit your specific needs.
+
+Comprehensive documentation: Our starter kit comes with detailed documentation, making it easy for developers to get up and running quickly.
+
+Built with industry best practices: Our starter kit is built using the latest industry best practices, ensuring your application is secure, maintainable, and easy to deploy.
+
+Whether you're a seasoned web developer or just getting started with React, our Enterprise Starter Kit has everything you need to build high-quality web applications quickly and efficiently. So why wait? Download our Starter Kit today and start building amazing web applications!
 
 ## Features: 
 
