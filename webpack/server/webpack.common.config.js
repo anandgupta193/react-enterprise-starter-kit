@@ -28,6 +28,19 @@ module.exports = {
         },
       },
       {
+        test: /\.css$/i,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+          loader: 'postcss-loader',
+            options: {
+              sourceMap: isDevEnv,
+            },
+          }
+        ],
+      },
+      {
         test: /\.scss$/,
         use: [
           MiniCssExtractPlugin.loader,
